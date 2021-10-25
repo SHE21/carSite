@@ -1,27 +1,22 @@
-from django.http import HttpResponse
-from django.views.generic import TemplateView
-from .forms import ContactForm
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
 
-from django.views.generic.edit import FormView
+from django.views.generic import FormView
+from .forms import ContactForm
+from django.contrib import messages
+from django.urls import reverse_lazy
 
 
 class IndexView(FormView):
     template_name = 'index.html'
-    form = ContactForm
+    form_class = ContactForm
+    success_url = reverse_lazy('index')
 
-    def post(self, request, *args, **kwargs):
-        form = self.form(request.POST)
-        print('sdocnifvnsdfivsdf')
 
-        if form.is_valid():
-            return HttpResponseRedirect('contact')
+    def form_valid(self, form, *args, **kwargs):
+        form.send_mail()
+        messages.success(self.request, 'Sucesso')
+        return super(IndexView, self).form_valid(form, *args, **kwargs)
 
-        return render(request, self.template_name, {'form': form})
 
-    def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.send_email()
-        return super().form_valid(form)
+    def form_invalid(self, form, *args, **kwargs):
+        messages.error(self.request, 'Error')
+        return super(IndexView, self).form_invalid(form, *args, **kwargs)
