@@ -1,4 +1,3 @@
-{% load static %}
 <section class="mbr-section form1 cid-sMFEFjqpRE" id="form1-4">
     <div class="container">
         <div class="row justify-content-center">
@@ -15,14 +14,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="media-container-column col-lg-8" data-form-type="formoid">
-                {% if menssages %}
+                {% if messages %}
                     {% for m in messages %}
-                        <div data-form-alert="" hidden="">
-                            Sua mensagem foi enviada!
-                        </div>
+                        
+                            {{ m }}
+                       
                     {% endfor %}
                 {% endif %}
-                    <form id = "contato" class="mbr-form" action="{% url 'home' %}" method="post" autocomplete="off">
+                    <form id = "contact" class="mbr-form" action="{% url 'index' %}" method="post" autocomplete="off">
                         {% csrf_token %}
                         <div class="row row-sm-offset">
                             <div class="col-md-4 multi-horizontal" data-for="name">

@@ -11,81 +11,26 @@
     </div>
     <div class="container">
         <div class="media-container-row">
+        {% for service in services %}
             <div class="card p-3 col-12 col-md-6 col-lg-3">
                 <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="{% static 'modelo/assets/images/01.jpg' %}" alt="Mobirise">
+                    <div class="card-img" style="width:80px;margin: 1rem;">
+                        <img src="static/img/{{ service.icon }}" alt="Mobirise">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
-                            No Coding
+                            {{ service.title }}
                         </h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like.
+                            {{ service.description }}
                         </p>
                     </div>
                     <div class="mbr-section-btn text-center">
-                        <a href="details" class="btn btn-secondary display-4">Learn More</a>
+                        <a href="details" class="btn btn-secondary display-4">ver mais</a>
                     </div>
                 </div>
             </div>
-
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="{% static 'modelo/assets/images/02.jpg' %}" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                            Mobile Friendly
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
-                        </p>
-                    </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.com" class="btn btn-secondary display-4">
-                            Learn More
-                        </a></div>
-                </div>
-            </div>
-
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="{% static 'modelo/assets/images/03.jpg' %}" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                            Unique Styles
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible.
-                        </p>
-                    </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.com" class="btn btn-secondary display-4">
-                            Learn More
-                        </a></div>
-                </div>
-            </div>
-
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="{% static 'modelo/assets/images/01.jpg' %}" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                            Unlimited Sites
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                           Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
-                        </p>
-                    </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.com" class="btn btn-secondary display-4">
-                            Learn More
-                        </a></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
