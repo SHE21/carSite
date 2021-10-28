@@ -28,29 +28,27 @@
                         </p>
                     </div>
                     <div class="mbr-section-btn text-center">
-                        <a href="details" class="btn btn-secondary display-4" data-bs-toggle="modal" data-bs-target="#exampleModal">ver mais</a>
+                        <a href="details" class="btn btn-secondary display-4" data-bs-toggle="modal" data-bs-target="#{{ service.id }}">ver mais</a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="{{ service.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ service.title }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                   {{ service.more }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
             {% endfor %}
         </div>
     </div>
-    <!-- Button trigger modal -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    
 </section>
