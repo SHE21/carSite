@@ -6,3 +6,12 @@ services = [
             {'id':'propose_rl','title':'Projeto de Proposta e Averbação de Reserva Legal', 'description':'Propomos um projecto de Reserva Legal (RL) usando todos nossos recursos e de acordo com a legislação Ambiental.', 'icon':'ic_rl.png', 'more':'A Proposta de Reserva Legal (RL) é uma exigência do Código Florestal para aprovar seu CAR. Todo imóvel é obrigado a deixar uma parte do imóvel para propor uma RL. Cada tipo de bioma em que o imóvel esteja situado tem uma porcentagem da área a ser deixada, além de outras agências e critérios definidos pelos analistas do órgão, como proximidades com outras RL para criar um corredor ecológico.'},
 
 ]
+
+team = [
+    {'id':'', 'name':'Demétrios Cadete', 'photo':'', 'description':'Analista de Geoprocessamento', 'occupation':'Geógrafo'},
+    {'id':'', 'name':'Leticia Silva', 'photo':'', 'description':'Licenciamento Ambiental', 'occupation':'Engenheiro Ambiental'},
+    {'id':'', 'name':'Ludimila Jansen', 'photo':'', 'description':'Solos e Geoprocessamento.', 'occupation':'Geógrafa'},
+    {'id':'', 'name':'Santiago, L.C.', 'photo':'', 'description':'Geoprocessamento, Aplicações e Soluções Geográficas', 'occupation':'Geógrafo'},
+    {'id':'', 'name':'Valter Santos', 'photo':'', 'description':'Analita de Dados e Cobertura solo', 'occupation':'Engenheiro Agrônomo'},
+    {'id':'', 'name':'Vitoria Santos', 'photo':'', 'description':'Analista de Geoprocessamento', 'occupation':'Bióloga e Geógrafa'},
+]
