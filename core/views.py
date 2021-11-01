@@ -3,7 +3,7 @@ from django.views.generic import FormView
 from .forms import ContactForm
 from django.contrib import messages
 from django.urls import reverse_lazy
-from .Data import services, team
+from .Data import services, team, footers
 
 
 class IndexView(FormView):
@@ -15,6 +15,7 @@ class IndexView(FormView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['services'] = services
         context['team'] = team
+        context['footers'] = footers
         return context
 
 

@@ -9,9 +9,16 @@ services = [
 
 team = [
     {'id':'', 'name':'Demétrios Cadete', 'photo':'', 'description':'Analista de Geoprocessamento', 'occupation':'Geógrafo'},
-    {'id':'', 'name':'Leticia Silva', 'photo':'', 'description':'Licenciamento Ambiental', 'occupation':'Engenheiro Ambiental'},
-    {'id':'', 'name':'Ludimila Jansen', 'photo':'', 'description':'Solos e Geoprocessamento.', 'occupation':'Geógrafa'},
+    {'id':'', 'name':'Leticia Silva', 'photo':'', 'description':'Licenciamento Ambiental', 'occupation':'Engenheira Ambiental'},
+    {'id':'', 'name':'Ludimila Jansen', 'photo':'lud.jpg', 'description':'Solos e Geoprocessamento.', 'occupation':'Geógrafa'},
     {'id':'', 'name':'Santiago, L.C.', 'photo':'', 'description':'Geoprocessamento, Aplicações e Soluções Geográficas', 'occupation':'Geógrafo'},
-    {'id':'', 'name':'Valter Santos', 'photo':'', 'description':'Analita de Dados e Cobertura solo', 'occupation':'Engenheiro Agrônomo'},
-    {'id':'', 'name':'Vitoria Santos', 'photo':'', 'description':'Analista de Geoprocessamento', 'occupation':'Bióloga e Geógrafa'},
+    {'id':'', 'name':'Valter Santos', 'photo':'valter.jpg', 'description':'Analita de Dados e Cobertura solo', 'occupation':'Engenheiro Agrônomo'},
+    {'id':'', 'name':'Vitoria Santos', 'photo':'vic.jpg', 'description':'Analista de Geoprocessamento', 'occupation':'Bióloga e Geógrafa'},
+]
+
+footers = [
+    {'title': 'Código Florestal', 'link':''},
+    {'title': 'SEMA', 'link':''},
+    {'title': 'Serviço Florestal Brasileiro', 'link':''},
+    {'title': 'Site CAR', 'link':''},
 ]

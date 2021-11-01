@@ -61,23 +61,19 @@
 
   {% endblock %}
 
-  <section once="" class="cid-sMFF9wCLXX" id="footer7-6">
+    <section once="" class="cid-sMFF9wCLXX" id="footer7-6">
     <div class="container">
         <div class="media-container-row align-center mbr-white">
             <div class="row row-links">
                 <ul class="foot-menu">
 
-                <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">About us</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Services</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Get In Touch</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Careers</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Work</a>
-                    </li></ul>
+                    {% for link in footers %}
+                    <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white mbr-bold" target="_blank" href="{{link.link}}" target="_blank">{{ link.title }}</a>
+                    </li>
+                    {% endfor %}
+
+                </ul>
             </div>
 
             <div class="row row-copirayt">
@@ -88,6 +84,7 @@
         </div>
     </div>
 </section>
+
     
      <!-- Modal -->
             <div class="modal fade" id="CAR" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -99,23 +96,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                   </div>
 
+                <form id="car-form" method="get" name="" action="">
                   <div class="modal-body">
                       <div class="mb-3">
-                          <label for="recipient-name" class="col-form-label">Código do seu CAR:</label>
-                          <form metho="get" name="" action="https://www.car.gov.br/#/consultar/">
-                                <input class="form-control" type='text' name="numbCar">
+                          <label for="recipient-name" class="col-form-label">Informe o número de registro no CAR (ou número de protocolo):</label>
+                            <input class="form-control" type='text' name="numbCar" placeholder="UF-1302405-E6D3.395B.6D27.4F42.AE22.DD56.987C.DD52" style="text-transform: uppercase;">
                       </div>
+                       <small>Após clicar em "CONSULTAR" você será rediracionado para página de autenticação do car.gov.br</small><p>
                   </div>
-
                   <div class="modal-footer">
-                    <button style href="" type="submit" class="btn btn-secondary btn-sm">CONSULTAR</button>
+                    <button onClick="send(this.form)" type="button" class="btn btn-secondary btn-sm">CONSULTAR</button>
                 </form>
                   </div>
               </div>
             </div>
         </div>
-            <!-- Modal -->
-
+    <!-- Modal -->
 
   <script src="{% static 'modelo/assets/web/assets/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'modelo/assets/popper/popper.min.js' %}"></script>
@@ -127,7 +123,6 @@
   <script src="{% static 'modelo/assets/dropdown/js/script.min.js' %}"></script>
   <script src="{% static 'modelo/assets/theme/js/script.js' %}"></script>
   <script src="{% static 'modelo/assets/formoid/formoid.min.js' %}"></script>
-
-
+  <script src="{% static 'js/Send.js' %}"></script>
 </body>
 </html>
